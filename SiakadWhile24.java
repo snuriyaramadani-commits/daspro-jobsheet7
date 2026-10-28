@@ -5,7 +5,7 @@ public class SiakadWhile24 {
         Scanner sc = new Scanner(System.in);
 
         int grade = 0;
-        int total;
+        int total = 0;
         int i = 0;
 
         System.out.println("Enter the number of student: ");
@@ -13,29 +13,31 @@ public class SiakadWhile24 {
 
         while (i < total) {
             System.out.println("Enter the grade of the " + (i + 1) + "student: ");
-            sc.nextInt();
+            grade = sc.nextInt();
             if (grade < 0 || grade > 100) {
                 System.out.println("Invalid grade. Re-enter a valid grade!");
                 continue;
             }
             if (grade > 80 && grade <= 100) {
-                System.out.println("The grade of the " + (i + 1) + "student is A");
+                System.out.println("The grade of the " + (i + 1) + " student is A");
+                System.out.println("Good! keet the grade!");
             } else if (grade > 73 && grade <= 80) {
-                System.out.println("The grade of the " + (i + 1) + "student is B+");
+                System.out.println("The grade of the " + (i + 1) + " student is B+");
             } else if (grade > 65 && grade <= 73) {
-                System.out.println("The grade of the " + (i + 1) + "student is B");
+                System.out.println("The grade of the " + (i + 1) + " student is B");
             } else if (grade > 60 && grade <= 65) {
-                System.out.println("The grade of the " + (i + 1) + "student is C+");
+                System.out.println("The grade of the " + (i + 1) + " student is C+");
             } else if (grade > 50 && grade <= 60) {
-                System.out.println("The grade of the " + (i + 1) + "student is C");
+                System.out.println("The grade of the " + (i + 1) + " student is C");
             } else if (grade > 39 && grade <= 50) {
-                System.out.println("The grade of the " + (i + 1) + "student is D");
+                System.out.println("The grade of the " + (i + 1) + " student is D");
             } else { // grade <= 39
-                System.out.println("The grade of student " + (i + 1) + "is E");
+                System.out.println("The grade of student " + (i + 1) + " is E");
             }
 
             i++; // update counter at the end of the loop
-            sc.close();
+
         }
+        sc.close();
     }
 }
